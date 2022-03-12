@@ -1,5 +1,11 @@
 @import "vars";
 
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/helvetica_bold.otf') format(otf),
+         url('../fonts/helvetica_regular.otf') format(otf);
+}
+
 /* Default styles */
 html {
     font-size: 15px;
@@ -8,7 +14,7 @@ html {
 body {
     margin: 0;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     color: black;
     font-size: 1rem;
     line-height: 1.5;
@@ -30,11 +36,17 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+.page {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
 
 /* Bootstrap */
 
-@import "../../../node_modules/bootstrap/scss/reboot";
-@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 
 /* Blocks */
@@ -42,3 +54,4 @@ h1, h2, h3, h4, h5, h6 {
 @import "blocks/header";
 @import "blocks/main";
 @import "blocks/footer";
+@import "blocks/menu";
